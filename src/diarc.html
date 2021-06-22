@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Satellite</title>
+
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <!-- <link rel='stylesheet' href='assets/css/app.css' type="text/css"> -->
+
+        <script defer src='/socket.io/socket.io.js'></script>
+        <script defer src='assets/js/diarc.js'></script>
+    </head>
+
+    <body>
+        <br>
+        <div class="container">
+            <button type="button" class="btn btn-primary" onclick="hintLeft()">Left</button>
+            <button type="button" class="btn btn-secondary" onclick="hintRight()">Right</button>
+            <button type="button" class="btn btn-success" onclick="hintForward()">Forward</button>
+            <button type="button" class="btn btn-danger" onclick="hintBackward()">Backward</button>
+            <button type="button" class="btn btn-warning" onclick="pushPlay()">Play</button>
+            <button type="button" class="btn btn-info" onclick="pushGrip()">Go</button>
+            <hr>
+            <div>
+                <h1 class="display-4">Send Messages</h1>
+            <br>
+            <form id="send-container">
+                <textarea id="message-input" class="form-control" placeholder="Your Message Here"></textarea>
+                <br>
+                <button id="send-button" class="btn btn-success" type="submit">Send</button>
+            </form>
+            </div>
+            <div id="message-container"></div>
+        </div>
+        
+        <!-- <% for(let i=0; i < 5; i++) { %>
+            <div>as</div>
+        <% } %> -->
+    </body>
+</html>
